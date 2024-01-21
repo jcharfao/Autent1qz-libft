@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:50:34 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/21 16:41:05 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/21 14:29:13 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/21 16:57:13 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*#include "libft.h"
 #include <stddef.h>
-#include <stdio.h>*/
-void	*ft_bzero(void *s, size_t n)
+#include <stdio.h>
+#include <string.h>*/
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*str;
+	unsigned char	*d;
+	unsigned char	*s;
 
-	str = (char *)s;
-	i = 0;
-	while (i < n && str[i])
+	if (src == NULL && dst == NULL)
+		return (NULL);
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (d >= s)
 	{
-		str[i] = 0;
-		i++;
+		while (len--)
+			d[len] = s[len];
 	}
-	return (s);
+	else
+		memcpy(d, s, len);
+	return (dst);
 }
-/*int main()
+/*int	main()
 {
-    char dest[] = "h";
-    ft_bzero(dest, 3);
-    printf("%s\n", dest);
-    return 0;
+	char	dt[] = "hoo";
+	char	sc[] = "hoo";
+	ft_memmove(dt, sc, 56);
+	printf("%s\n", dt);
 }*/
