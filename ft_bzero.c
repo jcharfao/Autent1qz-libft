@@ -6,13 +6,14 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:50:34 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/21 16:41:05 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:14:33 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
+#include "libft.h"
 #include <stddef.h>
-#include <stdio.h>*/
+#include <stdio.h>
+
 void	*ft_bzero(void *s, size_t n)
 {
 	size_t	i;
@@ -27,10 +28,3 @@ void	*ft_bzero(void *s, size_t n)
 	}
 	return (s);
 }
-/*int main()
-{
-    char dest[] = "h";
-    ft_bzero(dest, 3);
-    printf("%s\n", dest);
-    return 0;
-}*/

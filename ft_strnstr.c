@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:37:38 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/22 18:07:09 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/22 15:07:32 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/22 17:59:29 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
-
-size_t	ft_strlen(const char *src)
+/*#include <stddef.h>
+char *ft_strnstr(const char *cadena, const char *subcad, size_t len)
 {
 	size_t	i;
+	size_t	j;
+	char	*c;
+	char	*s;
 
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	return (i);
-}
+	c = (char *) cadena;
+	s = (char *) subcad;
+	
+	if (s[0]  == '\0')
+		return (c)
+}*/

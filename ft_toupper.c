@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:37:38 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/22 18:07:09 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/21 17:47:30 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/21 17:49:16 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
-
-size_t	ft_strlen(const char *src)
+int	ft_toupper(int c)
 {
-	size_t	i;
-
-	i = 0;
-	while (src[i])
-	{
-		i++;
-	}
-	return (i);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

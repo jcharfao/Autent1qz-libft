@@ -6,14 +6,15 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 14:29:13 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/21 16:57:13 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/01/22 18:09:27 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
+#include "libft.h"
 #include <stddef.h>
 #include <stdio.h>
-#include <string.h>*/
+#include <string.h>
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
