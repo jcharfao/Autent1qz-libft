@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 16:57:36 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/22 18:06:28 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/01/25 01:21:23 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,19 +21,21 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	while (dst[i] && src[j] && i < dstsize)
+	if (dstsize < 1)
+		return (strlen(src));
+	while (src[j] && i < dstsize - 1)
 	{
 		dst[i] = src[j];
 		i++;
 		j++;
 	}
-	return (strlen(dst));
+	dst[i] = '\0';
+	return (strlen(src));
 }
-/*
-int	main()
+/*int	main()
 {
-	char dst[] = "hodgsgsgsgo";
-	char src[] = "noogaerherearhereh";
-	
-	printf ("%zu\n", ft_strlcpy(dst, src, 67));
+	char dst[] = "mundo";
+	char src[] = "hola";
+	ft_strlcpy(dst, src, 3);
+	printf ("%s\n", dst);
 }*/

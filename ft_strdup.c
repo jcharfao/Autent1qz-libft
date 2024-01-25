@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 17:47:30 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/24 15:09:29 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/24 18:31:49 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/25 01:12:25 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_toupper(int c)
+/*char	*strdup(const char *s1)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
-}
-/*int	main()
-{
-	printf("%c\n", ft_toupper('?'));
+	
 }*/

@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 17:47:30 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/24 15:09:29 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/24 21:19:09 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/24 21:20:44 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-int	ft_toupper(int c)
+char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+	
 }
-/*int	main()
-{
-	printf("%c\n", ft_toupper('?'));
-}*/
