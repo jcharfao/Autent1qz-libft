@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 14:13:56 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/24 17:41:53 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/01/29 19:13:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t len)
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return ();
 }
 /*int	main()
  {

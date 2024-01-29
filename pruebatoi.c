@@ -1,47 +1,42 @@
-#include "libft.h"
 #include <stdio.h>
 #include <stddef.h>
-
-int    ft_isspace(int c)
+#include <string.h>
+#include <stdlib.h>
+char *ft_substr(const char *s, unsigned int start, size_t len)
 {
-    if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
- 
-        return (1);
-    return (0);
-}
-int    ft_atoi(const char *str)
-{
-    int    result;
-    int    sign;
-    int    i;
+    char *d;
+    size_t i;
     
-    result = 0;
-    sign = 1;
-    i = 0;
-    while (ft_isspace(str[i]))
-        i++;
-  
-    if (str[i] == '+' && str[i + 1] != '-')
-        i++;
-   
-    if (str[i] == '-')
+    if (!s || start >= strlen(s))
+        return (NULL);
+    if (len > strlen(s) - start)
+        len = strlen(s) - start;
+    d = (char *)malloc(sizeof(char) * (len + 1));
+    i = start;
+    while (i < start + len && s[i])
     {
-        sign = -1;
+        d[i - start] = s[i];
         i++;
     }
-  
-    while (str[i] && str[i] >= 48 && str[i] <= 57)
-    {
-        result *= 10;
-		result += str[i] - 48;
-		i++;
-    }
-    result *= sign;
-    return (result);
+    d[i] = '\0';
+    return (d);
 }
-int main ()
-{
-	char mistr[] = "      -42-lo.lhola";
-	int i = ft_atoi(mistr);
-	printf("%d\n", i);
+
+// Aquí colocar la definición de ft_substr
+
+int main() {
+    const char *s = "¡Hola, mundo!";
+    unsigned int start = 0;
+    size_t len = 50;
+
+    char *subcadena = ft_substr(s, start, len);
+    
+    if (subcadena) {
+        printf("Subcadena: %s\n", subcadena);
+        free(subcadena); // Liberar la memoria asignada a la subcadena
+    } else {
+        printf("Error: No se pudo crear la subcadena.\n");
+    }
+
+    return 0;
 }
