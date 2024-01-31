@@ -3,34 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/22 14:13:56 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/29 19:13:28 by marvin           ###   ########.fr       */
+/*   Created: 2024/01/31 06:34:51 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/31 08:30:19 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t len)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	src_len;
 	size_t	i;
-	size_t	j;
 
-	j = 0;
+	src_len = ft_strlen(dst);
 	i = 0;
-	while (dst[i] != '\0')
-		i++;
-	while (src[j] && i < len - 1)
+	if (dstsize <= src_len)
+		return (ft_strlen(src) + dstsize);
+	while (src[i] && (src_len + i) < (dstsize - 1))
 	{
-		dst[i] = src[j];
-		j++;
+		dst[src_len + i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return ();
+	dst[src_len + i] = 0;
+	return (ft_strlen(src) + src_len);
 }
+
+
 /*int	main()
  {
 	char dest[] = "hola";

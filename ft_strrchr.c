@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:40:35 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/31 06:45:12 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/01/31 07:04:56 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/01/31 07:36:03 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
-#include <stddef.h>
-
-void	*ft_memset(void *b, int c, size_t len)
+#include <string.h>
+char    *ft_strrchr(const char *s, int c)
 {
-	size_t			i;
-	unsigned char	*s;
-
-	s = (unsigned char *)b;
-	i = 0;
-	while (i < len && s[i])
-	{
-		s[i] = c;
-		i++;
-	}
-	return (s);
+    int     i;
+    char    p;
+    
+    p = c;
+    i = strlen(s);
+    if (p == 0)
+        return ((char *) &s[i]);
+    while (i >= 0)
+    {
+        if (s[i] == p)
+            return ((char *) &s[i]);
+        i--;
+    }
+    return (0);
 }
-/*int main()
-{
-    char dest[] = "hpñadsyhdnahydasda";
-    ft_memset(dest, 'A', 6);
-    printf("%s\n", dest);
-    return 0;
-}*/

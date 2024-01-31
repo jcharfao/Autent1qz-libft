@@ -6,7 +6,7 @@
 #    By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/19 20:08:21 by alromero          #+#    #+#              #
-#    Updated: 2024/01/22 17:54:11 by jcharfao         ###   ########.fr        #
+#    Updated: 2024/01/31 08:10:07 by jcharfao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,9 @@ CCFLAGS = -Wall -Wextra -Werror
 
 NAME = libft.a
 SRC =	ft_memset.c ft_bzero.c ft_strlen.c ft_atoi.c ft_isdigit.c ft_isalpha.c\
-ft_isprint.c ft_isascii.c ft_isalnum.c ft_memchr.c ft_memcpy.c\
-ft_memmove.c ft_strlcat.c ft_strlcpy.c\
-ft_strncmp.c ft_toupper.c ft_tolower.c  
+ft_isprint.c ft_isascii.c ft_isalnum.c ft_memchr.c ft_memcmp.c ft_memcpy.c\
+ft_memmove.c ft_strlcat.c ft_strlcpy.c ft_strjoin.c\
+ft_strncmp.c ft_toupper.c ft_tolower.c ft_substr.c ft_strchr.c ft_strrchr.c ft_strnstr.c
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 

@@ -12,11 +12,11 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-    void *str;
+	void	*str;
 
-    str = malloc(count * size);
-    if (str == 0)
-        return (str);
-    ft_bzero(str, size * count);
-    return (str);
+	str = malloc(count * size);
+	if (str == 0)
+		return (str);
+	ft_bzero(str, size * count);
+	return (str);
 }
