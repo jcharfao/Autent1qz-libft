@@ -1,24 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 14:53:10 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 09:15:35 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/02/16 02:11:18 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/02/16 09:15:59 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_calloc(size_t count, size_t size)
+/*
+char *ft_itoa(int n)
 {
-	void	*str;
-
-	str = malloc(count * size);
-	if (str == 0)
-		return (str);
-	ft_bzero(str, size * count);
-	return (str);
-}
+	
+}*/

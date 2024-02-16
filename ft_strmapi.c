@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 14:53:10 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 09:15:35 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/02/16 01:39:28 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/02/16 02:09:05 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	void	*str;
-
-	str = malloc(count * size);
-	if (str == 0)
-		return (str);
-	ft_bzero(str, size * count);
-	return (str);
+	char	*rep;
+	size_t i;
+	if (!s || !f)
+		return (NULL);
+	rep = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!rep)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		rep[i] = f(i, s[i]);
+		i++;
+	}
+	rep[i] = '\0';
+	return (rep);
 }

@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:34:51 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/31 08:30:19 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/16 09:54:00 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[src_len + i] = 0;
 	return (ft_strlen(src) + src_len);
 }
-
 
 /*int	main()
  {
