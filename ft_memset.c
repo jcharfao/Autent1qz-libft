@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:40:35 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/31 06:45:12 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/16 22:58:45 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ void	*ft_memset(void *b, int c, size_t len)
 
 	s = (unsigned char *)b;
 	i = 0;
-	while (i < len && s[i])
+	while (i < len)
 	{
 		s[i] = c;
 		i++;
 	}
-	return (s);
+	return (b);
 }
 /*int main()
 {

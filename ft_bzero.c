@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:50:34 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/03 22:51:11 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/16 22:59:57 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_bzero(void *s, size_t n)
 
 	str = (char *) s;
 	i = 0;
-	while (i < n && str[i])
+	while (i < n)
 	{
 		str[i] = 0;
 		i++;

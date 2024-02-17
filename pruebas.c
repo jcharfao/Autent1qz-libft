@@ -1,4 +1,4 @@
-#include <stdlib.h>
+/*#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -75,4 +75,4 @@ int main()
 	printf("Error al llamar a ft_strtrim\n");
 	}
 	return 0;
-}
+}*/

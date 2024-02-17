@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:19:46 by cpalazon          #+#    #+#             */
-/*   Updated: 2024/02/16 09:05:04 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/17 16:06:20 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,15 +38,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char    *ft_strchr(const char *s, int c);
-char    *ft_strrchr(const char *s, int c);
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
-char    *ft_strjoin(const char *s1, const char *s2);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strtrim(const char *s1, const char *set);
 int		ft_atoi(const char *str);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 void	*ft_striteri(char *s, void (*f) (unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 
 #endif

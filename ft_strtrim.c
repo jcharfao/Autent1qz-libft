@@ -6,15 +6,16 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 08:30:51 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 09:11:28 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/17 15:24:24 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 #include <string.h>
 #include <stdio.h>
 
-size_t	fti_strlen(const char *src)
+/*size_t	fti_strlen(const char *src)
 {
 	size_t	i;
 
@@ -37,14 +38,14 @@ char	*fti_strchr(const char *s, int c)
     if (s[i] == (char) c)
         return ((char *)&s[i]);
     return (0);
-}
-char	*ft_strtrim(const char *s1, const char *set)
+}*/
+/*char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	j;
 	size_t	l;
-	char *res;
-	
+	char	*res;
+
 	i = 0;
 	l = 0;
 	if (s1 == NULL)
@@ -65,7 +66,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	}
 	res[l] = '\0';
 	return (res);
-}
+}*/
 /*
 int main()
 {
