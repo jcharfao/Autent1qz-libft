@@ -76,3 +76,31 @@ int main()
 	}
 	return 0;
 }*/
+#include "libft.h"
+#include <stddef.h>
+#include <stdio.h>
+
+void	*ft_memcpy(void *dst, const void *src, size_t len)
+{
+	unsigned char	*d;
+	unsigned char	*s;
+	size_t			i;
+
+	i = 0;
+	d = (unsigned char *)dst;
+	s = (unsigned char *)src;
+	if (s == NULL && d == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (d);
+}
+int main()
+{
+  char dest[] = "Hello";
+  char src[] = "World";
+  printf("%s\n", ft_memcpy(dest, src, 3));
+}

@@ -1,38 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:50:34 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/18 20:25:22 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/02/18 15:04:19 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/02/19 23:33:46 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 #include <stdio.h>
 
-void	*ft_bzero(void *s, size_t n)
+int countstrs(char *t, char c)
 {
-	size_t	i;
-	char	*str;
-
-	str = (char *) s;
+	int i;
+	int strnum;
+	
+	strnum = 0;
 	i = 0;
-	while (i < n)
+	while (t[i])
 	{
-		str[i] = 0;
-		i++;
+		if (t[i] != c)
+		{
+			strnum++;
+			while (t[i] != c && t[i])
+				i++;
+		}
+		else
+			i++;
 	}
-	return (s);
+	return (strnum + 1);
+	
 }
 
-/*
-int  main()
+
+int main()
 {
-  char str[] = "hello world";
-  ft_bzero(str, 11);
-  printf("%s\n", str);
+	char str[] = "hoolalalaaalllllllaaa";
+	char c = 'l';
+	printf("%d\n", countstrs(str, c));
+}
+
+
+
+/*char **ft_split(char const *s, char c)
+{
+	int boxcount = countstrs(s, c);		
 }*/

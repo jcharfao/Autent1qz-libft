@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:19:46 by cpalazon          #+#    #+#             */
-/*   Updated: 2024/02/17 16:06:20 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/18 18:13:35 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,8 @@ void	*ft_striteri(char *s, void (*f) (unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_strtrim(char const *s1, char const *set);
+char *ft_itoa(int n);
 
 #endif

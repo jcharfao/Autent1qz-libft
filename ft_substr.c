@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 21:19:09 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/31 08:01:25 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/18 20:26:59 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	while (s[i] && i < len)
 	{
-		d[i] = s[i + start];
+		d[i] = s[start];
+		start++;
 		i++;
 	}
 	d[i] = '\0';

@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/21 13:50:34 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/18 20:25:22 by jcharfao         ###   ########.fr       */
+/*   Created: 2024/02/18 02:54:43 by jcharfao          #+#    #+#             */
+/*   Updated: 2024/02/18 03:02:39 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*str;
+	long	li;
 
-	str = (char *) s;
-	i = 0;
-	while (i < n)
+	li = n;
+	if (li < 0)
 	{
-		str[i] = 0;
-		i++;
+		ft_putchar_fd('-', fd);
+		li = li * -1;
 	}
-	return (s);
+	if (li >= 10)
+	{
+		ft_putnbr_fd(li / 10, fd);
+		ft_putnbr_fd(li % 10, fd);
+	}
+	else
+	{
+		ft_putchar_fd(li + '0', fd);
+	}
 }
-
-/*
-int  main()
-{
-  char str[] = "hello world";
-  ft_bzero(str, 11);
-  printf("%s\n", str);
-}*/
