@@ -6,12 +6,12 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 07:45:09 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 17:15:10 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/20 16:03:17 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
+#include <stdio.h>
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	h;
@@ -35,3 +35,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+/*
+int	main()
+{
+	char s1[] = "jacob";
+	char s2[] = "co";
+	printf("%s\n", ft_strnstr(s1, s2, 5));
+}
+*/

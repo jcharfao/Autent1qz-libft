@@ -6,11 +6,12 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 08:55:44 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 09:19:36 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:29:28 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
+#include <stdio.h>
 
 void	*ft_striteri(char *s, void (*f) (unsigned int, char*))
 {

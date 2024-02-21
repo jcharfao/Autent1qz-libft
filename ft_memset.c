@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:40:35 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 22:58:45 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:45:35 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,9 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*int main()
+int	main()
 {
-    char dest[] = "hpñadsyhdnahydasda";
-    ft_memset(dest, 'A', 6);
-    printf("%s\n", dest);
-    return 0;
-}*/
+	char *str = "holamun";
+	char str1[] = ft_memset(str, 's', 5);
+	printf("%s\n", str1);
+}

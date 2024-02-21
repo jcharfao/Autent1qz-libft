@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:53:10 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/18 15:22:51 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/20 18:37:53 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(str, size * count);
 	return (str);
 }
-/*int  main()
-{
-  char str[] = "hello world";
-  ft_bzero(str, 11);
-  printf("%s\n", str);
-}*/
