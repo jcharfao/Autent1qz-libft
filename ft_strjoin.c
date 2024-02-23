@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strjoin(const char *s1, const char *s2)
 {
@@ -21,7 +20,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 
 	i = 0;
 	j = 0;
-	p = (char *) malloc((strlen(s1) + strlen(s2) + 1) * sizeof(char));
+	p = (char *) malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!p)
 		return (NULL);
 	while (s1[i])

@@ -6,12 +6,10 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 09:13:27 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/16 09:14:43 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:22:33 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stddef.h>
 #include "libft.h"
 
 static int	ft_ispace(int c)
@@ -46,26 +44,3 @@ int	ft_atoi(const char *str)
 	}
 	return (resultado * sign);
 }
-/*
-int main()
-{
-	char mistr[] = "     -++42";
-	printf("%d\n", ft_atoi(mistr));
-}*/
-	/*
-	if (str[i] == '+' && str[i + 1] == '-' || \
-	str[i] == '-' && str[i + 1] == '+' || \
-	str[i] == '+' && str[i + 1] == '+' || \
-	str[i] == '-' && str[i + 1] == '-')
-	{
-		i++;
-	}*/
-	/*if (str[i] == '-')
-		sign *= -1;
-	if (str[i] == '-' || str[i] = '+')
-		i++;	
-	if (str[i] >= '0' && str[i] <= '9' && str[i])
-	{
-			
-	}
-		*/

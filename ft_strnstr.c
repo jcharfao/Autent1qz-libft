@@ -6,12 +6,12 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 07:45:09 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/20 16:03:17 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:35:50 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
+
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	h;

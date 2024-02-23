@@ -6,7 +6,7 @@
 #    By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/19 20:08:21 by alromero          #+#    #+#              #
-#    Updated: 2024/02/20 15:48:03 by jcharfao         ###   ########.fr        #
+#    Updated: 2024/02/22 19:42:30 by jcharfao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ ft_isprint.c ft_isascii.c ft_isalnum.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_ca
 ft_memmove.c ft_strlcat.c ft_strlcpy.c ft_strjoin.c ft_strdup.c\
 ft_strncmp.c ft_toupper.c ft_tolower.c ft_substr.c ft_strchr.c ft_strrchr.c ft_strnstr.c ft_atoi.c\
 ft_strmapi.c ft_striteri.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
-ft_itoa.c
+ft_itoa.c ft_split.c
 OBJ = $(SRC:.c=.o)
 INCLUDE = libft.h
 
@@ -36,7 +36,7 @@ $(NAME): $(OBJ) $(INCLUDE)
 	$(CC) $(CCFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJ) $(BONUSOBJ)
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)

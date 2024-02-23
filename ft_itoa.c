@@ -6,16 +6,15 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 02:11:18 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/20 12:56:29 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 16:19:51 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-static int int_len(long nbr)
+static int	ilen(long nbr)
 {
-	int cont;
+	int	cont;
 
 	cont = 0;
 	if (nbr < 0)
@@ -32,9 +31,10 @@ static int int_len(long nbr)
 	}
 	return (cont);
 }
-static char	*pre_conv(int len)
+
+static char	*preconvers(int len)
 {
-	char *tmp;;
+	char	*tmp;
 
 	tmp = malloc((len +1) * sizeof(char));
 	if (!tmp)
@@ -42,25 +42,26 @@ static char	*pre_conv(int len)
 	tmp[0] = '0';
 	return (tmp);
 }
+
 char	*ft_itoa(int n)
 {
-	long	ñ;
+	long	o;
 	int		len;
-	char *result;
-	int i;
+	char	*result;
+	int		i;
 
-	ñ = n;
-	len = int_len(ñ);
-	result = pre_conv(len);
+	o = n;
+	len = ilen(o);
+	result = preconvers(len);
 	if (!result)
 		return (NULL);
-	if (ñ < 0)
-		ñ = -ñ;
+	if (o < 0)
+		o *= -1;
 	i = len - 1;
-	while (ñ != 0)
+	while (o != 0)
 	{
-		result[i] = ((ñ % 10) + 48);
-		ñ = ñ / 10;
+		result[i] = ((o % 10) + 48);
+		o = o / 10;
 		i--;
 	}
 	if (n < 0)
@@ -68,3 +69,10 @@ char	*ft_itoa(int n)
 	result[len] = 0;
 	return (result);
 }
+
+/*int main()
+{
+	int n = 2147483648;
+	printf("%s\n", ft_itoa(n));
+	return (0);
+}*/

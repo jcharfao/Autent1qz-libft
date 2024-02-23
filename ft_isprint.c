@@ -6,12 +6,12 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:34:32 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/21 13:58:22 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:26:27 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"
-*/
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)

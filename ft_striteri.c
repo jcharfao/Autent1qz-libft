@@ -6,24 +6,34 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 08:55:44 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/20 18:29:28 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:35:14 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
-void	*ft_striteri(char *s, void (*f) (unsigned int, char*))
+/*void	itoupper(unsigned int i, char *c)
+{
+	if (*c >= 'a' && *c <= 'z')
+		*c -= 32;
+}
+*/
+void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 {
 	size_t	i;
 
 	i = 0;
-	if (!s || !f)
-		return (NULL);
 	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;
 	}
-	return (0);
 }
+
+/*int main()
+{
+	char s[] = "hola";
+	ft_striteri(s, itoupper);
+	printf("%s\n", s);
+	return (0);
+}*/

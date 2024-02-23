@@ -6,13 +6,11 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 19:04:01 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/22 17:59:10 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:18:13 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -33,3 +31,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+
+/*int main()
+{
+	char s[] = "hloladasdadasd";
+	printf("%s\n", ft_memchr(s, 'l', 30));
+	return (0);
+}*/

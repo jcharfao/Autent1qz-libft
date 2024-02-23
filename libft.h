@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/09 13:19:46 by cpalazon          #+#    #+#             */
-/*   Updated: 2024/02/18 18:13:35 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 19:42:56 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len);
-void	*ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
@@ -47,12 +47,13 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strtrim(const char *s1, const char *set);
 int		ft_atoi(const char *str);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-void	*ft_striteri(char *s, void (*f) (unsigned int, char*));
+void	ft_striteri(char *s, void (*f) (unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
-char *ft_itoa(int n);
+char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
 
 #endif

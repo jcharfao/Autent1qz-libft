@@ -6,12 +6,11 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:34:51 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/20 16:11:39 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:35:29 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -31,10 +30,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src) + src_len);
 }
 
-int	main()
+/*int	main()
 {
 	char dest[] = "hola";
 	char sourc[] = "mundo";
 	ft_strlcat(dest, sourc, 0);
 	printf("%s\n", dest);
- }
+}*/

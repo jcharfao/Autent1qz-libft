@@ -6,11 +6,11 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 17:47:30 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/20 16:53:59 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:36:21 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"	
 
 int	ft_toupper(int c)
 {

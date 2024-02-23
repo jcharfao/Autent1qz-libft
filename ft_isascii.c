@@ -6,11 +6,12 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:15:27 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/21 13:28:30 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:26:14 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include "libft.h"*/
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

@@ -6,46 +6,94 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 15:04:19 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/19 23:33:46 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/23 16:54:52 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int countstrs(char *t, char c)
+static int	numstring(char const *s1, char c)
 {
-	int i;
-	int strnum;
-	
-	strnum = 0;
-	i = 0;
-	while (t[i])
+	int	comp;
+	int	cles;
+
+	comp = 0;
+	cles = 0;
+	if (*s1 == '\0')
+		return (0);
+	while (*s1 != '\0')
 	{
-		if (t[i] != c)
+		if (*s1 == c)
+			cles = 0;
+		else if (cles == 0)
 		{
-			strnum++;
-			while (t[i] != c && t[i])
-				i++;
+			cles = 1;
+			comp++;
 		}
-		else
-			i++;
+		s1++;
 	}
-	return (strnum + 1);
-	
+	return (comp);
 }
 
-
-int main()
+static int	numchar(char const *s2, char c, int i)
 {
-	char str[] = "hoolalalaaalllllllaaa";
-	char c = 'l';
-	printf("%d\n", countstrs(str, c));
+	int	lenght;
+
+	lenght = 0;
+	while (s2[i] != c && s2[i] != '\0')
+	{
+		lenght++;
+		i++;
+	}
+	return (lenght);
 }
 
-
-
-/*char **ft_split(char const *s, char c)
+static char	**freee(char const **dst, int j)
 {
-	int boxcount = countstrs(s, c);		
-}*/
+	while (j > 0)
+	{
+		j--;
+		free((void *)dst[j]);
+	}
+	free(dst);
+	return (NULL);
+}
+
+static char	**affect(char const *s, char **dst, char c, int l)
+{
+	int	i;
+	int	j;
+	int	k;
+
+	i = 0;
+	j = 0;
+	while (s[i] && j < l)
+	{
+		k = 0;
+		while (s[i] == c)
+			i++;
+		dst[j] = (char *)malloc(sizeof(char) * numchar(s, c, i) + 1);
+		if (dst[j] == NULL)
+			return (freee((char const **)dst, j));
+		while (s[i] && s[i] != c)
+			dst[j][k++] = s[i++];
+		dst[j][k] = '\0';
+		j++;
+	}
+	dst[j] = NULL;
+	return (dst);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**dst;
+	int		l;
+
+	if (s == NULL)
+		return (NULL);
+	l = numstring(s, c);
+	dst = (char **)malloc(sizeof(char *) * (l + 1));
+	if (dst == NULL)
+		return (NULL);
+	return (affect(s, dst, c, l));
+}

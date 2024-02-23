@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/18 02:54:43 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/02/18 03:02:39 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/22 15:31:43 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,9 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd(li + '0', fd);
 	}
 }
+
+/*int	main()
+{
+	ft_putnbr_fd(-123, 1);
+	return (0);
+}*/

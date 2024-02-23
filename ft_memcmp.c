@@ -6,7 +6,7 @@
 /*   By: jcharfao <jcharfao@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/31 06:54:43 by jcharfao          #+#    #+#             */
-/*   Updated: 2024/01/31 07:02:28 by jcharfao         ###   ########.fr       */
+/*   Updated: 2024/02/23 23:18:16 by jcharfao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,11 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
+}
+
+int	main()
+{
+	char s1[] = "hoasdasdla";
+	char s2[] = "holfa";
+	printf("%d\n", ft_memcmp(s1, s2, 4));
 }
